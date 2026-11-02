@@ -1,0 +1,52 @@
+<Scene>
+
+    <!-- Player -->
+    <GameObject id="player" type="player">
+        <BodyComponent
+                x="100"
+                y="200"
+        />
+        <SpriteComponent textureKey="player" />
+        <ControllerComponent speed="5" />
+    </GameObject>
+
+    <!-- Enemy that runs away -->
+    <GameObject id="enemy1" type="enemy">
+        <BodyComponent
+                x="300"
+                y="400"
+        />
+        <SpriteComponent textureKey="enemy" />
+        <Behavior1Component
+                speed="3"
+                detectionRange="200"
+        />
+    </GameObject>
+
+    <!-- Enemy that follows -->
+    <GameObject id="enemy2" type="enemy">
+        <BodyComponent
+                x="500"
+                y="400"
+        />
+        <SpriteComponent textureKey="enemy" />
+        <Behavior2Component
+                speed="2"
+                stopDistance="100"
+        />
+    </GameObject>
+
+    <!-- Moving object -->
+    <GameObject id="enemy3" type="enemy">
+        <BodyComponent
+                x="50"
+                y="100"
+        />
+        <SpriteComponent textureKey="enemy" />
+        <SlideComponent
+                speed="3"
+                left="0"
+                right="300"
+        />
+    </GameObject>
+</Scene>
